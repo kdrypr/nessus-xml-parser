@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="18.1.4.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="XtraReport" ScriptsSource="&#xD;&#xA;private void tableCell2_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e) {&#xD;&#xA;XRTableCell cell = sender as XRTableCell;&#xD;&#xA;switch(GetCurrentColumnValue(&quot;risk_factor&quot;).ToString())&#xD;&#xA;{&#xD;&#xA;case &quot;None&quot;:&#xD;&#xA;cell.BackColor = Color.FromArgb(115,177,214);&#xD;&#xA;cell.ForeColor = Color.White;&#xD;&#xA;break;&#xD;&#xA;case &quot;Low&quot;:&#xD;&#xA;cell.BackColor = Color.FromArgb(238,230,87);&#xD;&#xA;cell.ForeColor = Color.Black;&#xD;&#xA;break;&#xD;&#xA;case &quot;Medium&quot;:&#xD;&#xA;cell.BackColor = Color.FromArgb(252,185,65);&#xD;&#xA;cell.ForeColor = Color.Black;&#xD;&#xA;break;&#xD;&#xA;case &quot;High&quot;:&#xD;&#xA;cell.BackColor = Color.FromArgb(252,96,66);&#xD;&#xA;cell.ForeColor = Color.White;&#xD;&#xA;break;&#xD;&#xA;case &quot;Critical&quot;:&#xD;&#xA;cell.BackColor = Color.FromArgb(60,55,65);&#xD;&#xA;cell.ForeColor = Color.White;&#xD;&#xA;break;&#xD;&#xA;default:&#xD;&#xA;cell.BackColor = Color.White;&#xD;&#xA;cell.ForeColor = Color.Black;&#xD;&#xA;break;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;private void tableCell1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e) {&#xD;&#xA;XRTableCell cell = sender as XRTableCell;&#xD;&#xA;switch(GetCurrentColumnValue(&quot;risk_factor&quot;).ToString())&#xD;&#xA;{&#xD;&#xA;case &quot;None&quot;:&#xD;&#xA;cell.BackColor = Color.FromArgb(115,177,214);&#xD;&#xA;cell.ForeColor = Color.White;&#xD;&#xA;break;&#xD;&#xA;case &quot;Low&quot;:&#xD;&#xA;cell.BackColor = Color.FromArgb(238,230,87);&#xD;&#xA;cell.ForeColor = Color.Black;&#xD;&#xA;break;&#xD;&#xA;case &quot;Medium&quot;:&#xD;&#xA;cell.BackColor = Color.FromArgb(252,185,65);&#xD;&#xA;cell.ForeColor = Color.Black;&#xD;&#xA;break;&#xD;&#xA;case &quot;High&quot;:&#xD;&#xA;cell.BackColor = Color.FromArgb(252,96,66);&#xD;&#xA;cell.ForeColor = Color.White;&#xD;&#xA;break;&#xD;&#xA;case &quot;Critical&quot;:&#xD;&#xA;cell.BackColor = Color.FromArgb(60,55,65);&#xD;&#xA;cell.ForeColor = Color.White;&#xD;&#xA;break;&#xD;&#xA;default:&#xD;&#xA;cell.BackColor = Color.White;&#xD;&#xA;cell.ForeColor = Color.Black;&#xD;&#xA;break;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;    &#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;private void richText1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e) {&#xD;&#xA;XRRichText richText = (XRRichText)sender;&#xD;&#xA;richText.Font = new Font(&quot;Calibri&quot;,12);&#xD;&#xA;richText.TextAlignment = TextAlignment.MiddleCenter;&#xD;&#xA;        }&#xD;&#xA;&#xD;&#xA;" Margins="51, 50, 17, 14" PaperKind="A4" PageWidth="827" PageHeight="1169" Version="18.1" DataSource="#Ref-0" BorderColor="White">
+  <Parameters>
+    <Item1 Ref="3" Description="NameParameter" ValueInfo="Sample Customer Name" Name="NameParameter" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="4" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="16.5865269" />
+    <Item2 Ref="5" ControlType="PageHeaderBand" Name="pageHeaderBand1" HeightF="28.125" StyleName="ReportHeaderBandStyle">
+      <Controls>
+        <Item1 Ref="6" ControlType="XRLabel" Name="label6" Multiline="true" Text="label6" TextAlignment="MiddleRight" SizeF="726.000061,23" LocationFloat="0, 2.000014" Font="Calibri, 9.75pt" BackColor="Transparent" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="7" Expression="[Parameters].[NameParameter]" PropertyName="Text" EventName="BeforePrint" />
+          </ExpressionBindings>
+          <StylePriority Ref="8" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+        </Item1>
+      </Controls>
+    </Item2>
+    <Item3 Ref="9" ControlType="DetailBand" Name="detailBand1" HeightF="171.849243" EvenStyleName="ReportEvenStyle" OddStyleName="ReportOddStyle" StyleName="ReportDetailBandStyle">
+      <SortFields>
+        <Item1 Ref="10" FieldName="risk_factor_order" SortOrder="Descending" />
+      </SortFields>
+      <Controls>
+        <Item1 Ref="11" ControlType="XRLabel" Name="label1" Multiline="true" Text="İlgili Yerler  :" SizeF="150,32.3750153" LocationFloat="0, 60.9326668" Font="Calibri, 12pt, style=Bold" Padding="2,2,0,0,100" BorderColor="Black" Borders="None">
+          <StylePriority Ref="12" UseFont="false" />
+        </Item1>
+        <Item2 Ref="13" ControlType="XRRichText" Name="richText1" TextAlignment="MiddleCenter" SerializableRtfString="ewBcAHIAdABmADEAXABkAGUAZgBmADAAewBcAGYAbwBuAHQAdABiAGwAewBcAGYAMAAgAEMAYQBsAGkAYgByAGkAOwB9AHsAXABmADEAXABmAGMAaABhAHIAcwBlAHQAMQA2ADIAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0AfQB7AFwAYwBvAGwAbwByAHQAYgBsACAAOwBcAHIAZQBkADAAXABnAHIAZQBlAG4AMABcAGIAbAB1AGUAMgA1ADUAIAA7AH0AewBcACoAXABkAGUAZgBjAGgAcAAgAFwAZgAxAFwAZgBzADIANAB9AHsAXABzAHQAeQBsAGUAcwBoAGUAZQB0ACAAewBcAHEAbABcAGYAMQBcAGYAcwAyADQAIABOAG8AcgBtAGEAbAA7AH0AewBcACoAXABjAHMAMQBcAGYAMQBcAGYAcwAyADQAIABEAGUAZgBhAHUAbAB0ACAAUABhAHIAYQBnAHIAYQBwAGgAIABGAG8AbgB0ADsAfQB7AFwAKgBcAGMAcwAyAFwAcwBiAGEAcwBlAGQAbwBuADEAXABmADEAXABmAHMAMgA0ACAATABpAG4AZQAgAE4AdQBtAGIAZQByADsAfQB7AFwAKgBcAGMAcwAzAFwAdQBsAFwAZgAxAFwAZgBzADIANABcAGMAZgAxACAASAB5AHAAZQByAGwAaQBuAGsAOwB9AHsAXAAqAFwAdABzADQAXAB0AHMAcgBvAHcAZABcAGYAMQBcAGYAcwAyADQAXABxAGwAXAB0AHMAYwBlAGwAbABwAGEAZABkAGYAbAAzAFwAdABzAGMAZQBsAGwAcABhAGQAZABsADEAMAA4AFwAdABzAGMAZQBsAGwAcABhAGQAZABmAGIAMwBcAHQAcwBjAGUAbABsAHAAYQBkAGQAZgByADMAXAB0AHMAYwBlAGwAbABwAGEAZABkAHIAMQAwADgAXAB0AHMAYwBlAGwAbABwAGEAZABkAGYAdAAzAFwAdABzAHYAZQByAHQAYQBsAHQAXABjAGwAdAB4AGwAcgB0AGIAIABOAG8AcgBtAGEAbAAgAFQAYQBiAGwAZQA7AH0AewBcACoAXAB0AHMANQBcAHQAcwByAG8AdwBkAFwAcwBiAGEAcwBlAGQAbwBuADQAXABmADEAXABmAHMAMgA0AFwAcQBsAFwAdAByAGIAcgBkAHIAdABcAGIAcgBkAHIAcwBcAGIAcgBkAHIAdwAxADAAXAB0AHIAYgByAGQAcgBsAFwAYgByAGQAcgBzAFwAYgByAGQAcgB3ADEAMABcAHQAcgBiAHIAZAByAGIAXABiAHIAZAByAHMAXABiAHIAZAByAHcAMQAwAFwAdAByAGIAcgBkAHIAcgBcAGIAcgBkAHIAcwBcAGIAcgBkAHIAdwAxADAAXAB0AHIAYgByAGQAcgBoAFwAYgByAGQAcgBzAFwAYgByAGQAcgB3ADEAMABcAHQAcgBiAHIAZAByAHYAXABiAHIAZAByAHMAXABiAHIAZAByAHcAMQAwAFwAdABzAGMAZQBsAGwAcABhAGQAZABmAGwAMwBcAHQAcwBjAGUAbABsAHAAYQBkAGQAbAAxADAAOABcAHQAcwBjAGUAbABsAHAAYQBkAGQAZgByADMAXAB0AHMAYwBlAGwAbABwAGEAZABkAHIAMQAwADgAXAB0AHMAdgBlAHIAdABhAGwAdABcAGMAbAB0AHgAbAByAHQAYgAgAFQAYQBiAGwAZQAgAFMAaQBtAHAAbABlACAAMQA7AH0AfQB7AFwAKgBcAGwAaQBzAHQAbwB2AGUAcgByAGkAZABlAHQAYQBiAGwAZQB9AFwAbgBvAHUAaQBjAG8AbQBwAGEAdABcAHMAcABsAHkAdAB3AG4AaQBuAGUAXABoAHQAbQBhAHUAdABzAHAAXABwAGEAcgBkAFwAcABsAGEAaQBuAFwAcQBsAFwAZgAxAFwAZgBzADIANABcAHAAYQByAH0A" SizeF="726.000061,57.3750153" LocationFloat="0, 93.3076248" Font="Calibri, 12pt" Padding="0,0,0,0,100" BorderColor="Black" Borders="All">
+          <ExpressionBindings>
+            <Item1 Ref="14" Expression="[name]" PropertyName="Html" EventName="BeforePrint" />
+          </ExpressionBindings>
+          <StylePriority Ref="15" UseFont="false" UsePadding="false" />
+          <Scripts Ref="16" OnBeforePrint="richText1_BeforePrint" />
+        </Item2>
+        <Item3 Ref="17" ControlType="XRPageBreak" Name="pageBreak1" LocationFloat="0, 162.932678" />
+        <Item4 Ref="18" ControlType="XRTable" Name="table1" TextAlignment="MiddleLeft" SizeF="726,50" LocationFloat="0, 0" Font="Segoe UI Light, 8pt" BorderColor="Black" Borders="All">
+          <Rows>
+            <Item1 Ref="19" ControlType="XRTableRow" Name="tableRow1" Weight="1.3658523572290804">
+              <Cells>
+                <Item1 Ref="20" ControlType="XRTableCell" Name="tableCell1" Weight="0.6198347578163157" Text="Risk Seviyesi" Font="Calibri, 12pt" ForeColor="White" BackColor="255,115,177,214" Padding="0,0,0,0,100" BorderColor="Black">
+                  <Scripts Ref="21" OnBeforePrint="tableCell1_BeforePrint" />
+                  <StylePriority Ref="22" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" />
+                </Item1>
+                <Item2 Ref="23" ControlType="XRTableCell" Name="tableCell2" Weight="2.3801653682893789" Text="tableCell2" TextAlignment="MiddleCenter" Font="Calibri, 12pt, style=Bold" ForeColor="White" BackColor="255,115,177,214" Padding="0,0,0,0,100">
+                  <Scripts Ref="24" OnBeforePrint="tableCell2_BeforePrint" />
+                  <ExpressionBindings>
+                    <Item1 Ref="25" Expression="[risk_factor]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="26" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseTextAlignment="false" />
+                </Item2>
+              </Cells>
+            </Item1>
+            <Item2 Ref="27" ControlType="XRTableRow" Name="tableRow3" Weight="1.3658523572290804">
+              <Cells>
+                <Item1 Ref="28" ControlType="XRTableCell" Name="tableCell3" Weight="0.6198347578163157" Text="Zafiyet Adı" Font="Calibri, 12pt" Padding="0,0,0,0,100">
+                  <StylePriority Ref="29" UseFont="false" UsePadding="false" />
+                </Item1>
+                <Item2 Ref="30" ControlType="XRTableCell" Name="tableCell4" Weight="2.3801653682893789" Text="tableCell4" Font="Calibri, 12pt" Padding="0,0,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="31" Expression="[pluginName]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="32" UseFont="false" UsePadding="false" />
+                </Item2>
+              </Cells>
+            </Item2>
+          </Rows>
+          <StylePriority Ref="33" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+        </Item4>
+      </Controls>
+    </Item3>
+    <Item4 Ref="34" ControlType="ReportFooterBand" Name="reportFooterBand1" HeightF="0" />
+    <Item5 Ref="35" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="13.541667" />
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="36" Name="ReportHeaderBandStyle" BorderStyle="Inset" Padding="4,4,0,0,100" BackColor="255,206,206,206" StringFormat="Near;Center;0;None;Character;Default" TextAlignment="MiddleLeft" />
+    <Item2 Ref="37" Name="ReportGroupHeaderBandStyle" BorderStyle="Inset" Padding="4,0,0,0,100" BackColor="255,206,206,206" StringFormat="Near;Center;0;None;Character;Default" TextAlignment="MiddleLeft" />
+    <Item3 Ref="38" Name="ReportDetailBandStyle" BorderStyle="Inset" Padding="4,4,0,0,100" BackColor="Transparent" StringFormat="Near;Center;0;None;Character;Default" TextAlignment="MiddleLeft" />
+    <Item4 Ref="39" Name="ReportGroupFooterBandStyle" BorderStyle="Inset" Padding="4,4,0,0,100" BackColor="255,206,206,206" StringFormat="Near;Center;0;None;Character;Default" TextAlignment="MiddleLeft" />
+    <Item5 Ref="40" Name="ReportFooterBandStyle" BorderStyle="Inset" Padding="4,4,0,0,100" BackColor="255,206,206,206" StringFormat="Near;Center;0;None;Character;Default" TextAlignment="MiddleLeft" />
+    <Item6 Ref="41" Name="ReportOddStyle" BorderStyle="Inset" Padding="4,4,0,0,100" BackColor="Transparent" StringFormat="Near;Center;0;None;Character;Default" TextAlignment="MiddleLeft" />
+    <Item7 Ref="42" Name="ReportEvenStyle" BorderStyle="Inset" Padding="4,4,0,0,100" BackColor="Transparent" StringFormat="Near;Center;0;None;Character;Default" TextAlignment="MiddleLeft" />
+    <Item8 Ref="43" Name="Style1" BorderStyle="Inset" Padding="2,2,0,0,100" Font="Times New Roman, 9.75pt" BackColor="Transparent" BorderColor="Black" Sides="Top, Right, Bottom" StringFormat="Near;Center;FitBlackBox, LineLimit, NoClip;None;Character;GenericTypographic" TextAlignment="MiddleLeft" />
+    <Item9 Ref="44" Name="Style2" BorderStyle="Inset" Padding="2,2,0,0,100" Font="Calibri, 12pt, charSet=162" BackColor="Transparent" BorderColor="Black" Sides="Top, Right, Bottom" StringFormat="Center;Center;FitBlackBox, LineLimit, NoClip;None;Character;GenericTypographic" TextAlignment="MiddleCenter" />
+  </StyleSheet>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v18.1" Ref="0" Content="~Xtra#NULL" Type="System.Data.DataTable" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

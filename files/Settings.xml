@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Root>
+  <Company>
+      <CustomerName>BEAM TEKNOLOJI A.S.</CustomerName>
+	  <FontStyle>Calibri</FontStyle>
+	  <FontSize>18</FontSize>
+  </Company>
+  <SFTP>
+		<Host>10.10.20.103</Host>
+		<UserName>root</UserName>
+		<Port>22</Port>
+		<RemotePath>/root/</RemotePath>
+  </SFTP>
+  <Form>
+      <FormHeight>360</FormHeight>
+      <FormWidth>640</FormWidth>
+	  <StandBy>3000</StandBy>
+  </Form>
+  <Logo>
+      <FileName>tc.jpg</FileName>
+  </Logo>
+</Root>
