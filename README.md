@@ -1,4 +1,4 @@
-# nessus-xml-parser
+# NESSUS-XML-PARSER-AND-REPORTER
 This software can parse all .nessus xml files and it can translate to report.
 
 Özellikleri:
