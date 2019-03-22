@@ -21,15 +21,15 @@ This software can parse all .nessus xml files and it can translate to report.
 
 Features:
 
--Multiple XML files can upload, can parse
+- Multiple XML files can upload and parse
 
 - You can write the notes on the right side and you can sort them if you have an extra verification script.
 
 - On top right you can generate output in 3 different formats so that you can verify it with tools like Nmap, and send these outputs to SSH via a device you want.
 
-- You can print the output of the reports as text.
+- Local reports in the format you want to print the text file.
 
-- "TSE infiltration test report" format you can create reports.
+- You can create report like Turkish Standardization Institute report format.
 
 - You can also get reports of the Vulnerability Name and Relevant Places.
 
