@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <Root>
   <Company>
-      <CustomerName>BEAM TEKNOLOJI A.S.</CustomerName>
+      <CustomerName>BEAM TEKNOLOJİ A.Ş.</CustomerName>
 	  <FontStyle>Calibri</FontStyle>
 	  <FontSize>18</FontSize>
   </Company>
   <SFTP>
-		<Host>10.10.20.103</Host>
+		<Host>192.168.1.100</Host>
 		<UserName>root</UserName>
 		<Port>22</Port>
 		<RemotePath>/root/</RemotePath>
